@@ -21,3 +21,9 @@ sudo /etc/init.d/mysqld start
 wget https://raw.githubusercontent.com/fattoot/seafile/master/install_seafile.sh
 
 chmod +x install_seafile.sh && ./install_seafile.sh
+
+转自fattoot ---OK
+
+wget https://raw.githubusercontent.com/wo343930641/seafile/master/install_seafile.sh
+
+chmod +x install_seafile.sh && ./install_seafile.sh
