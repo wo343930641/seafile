@@ -86,3 +86,4 @@ if [ "$stype" == 1 ]
 	else
 		echo "参数错误！"
 	fi	
+#1111111
