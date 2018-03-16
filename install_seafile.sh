@@ -1,7 +1,7 @@
 #!/bin/bash
 ################ 一键安装Seafile脚本 ##################
 #Author:xiaoz.me
-#Update:2017-12-06
+#Update:2018-03-09
 #######################   END   #######################
 
 #防火墙放行端口
@@ -22,13 +22,13 @@ function chk_firewall() {
 #安装seafile函数
 function install_sea() {
 	cd /home/MyCloud
-	#下载安装包6.2.9 64bit
-	wget http://p56eu8mfv.bkt.clouddn.com/seafile-pro-server_6.2.9_x86-64.tar.gz
+	#下载安装包6.2.5 64bit
+	wget http://seafile-downloads.oss-cn-shanghai.aliyuncs.com/seafile-server_6.2.5_x86-64.tar.gz
 	#解压
-	tar -zxvf seafile-pro-server_6.2.9_x86-64.tar.gz	
+	tar -zxvf seafile-server_6.2.5_x86-64.tar.gz
 	mkdir installed
-	mv seafile-pro-server*.tar.gz ./installed
-	mv seafile-pro-server-6* seafile-server
+	mv seafile-server*.tar.gz ./installed
+	mv seafile-server-6* seafile-server
 	#安装依赖环境
 	yum -y install python-setuptools python-imaging python-ldap MySQL-python python-memcached python-urllib3
 	#进行安装
@@ -43,7 +43,7 @@ function install_sea() {
 	echo "/home/MyCloud/seafile-server/seahub.sh start" >> /etc/rc.d/rc.local
 	chmod u+x /etc/rc.d/rc.local
 	#获取IP
-	osip=$(curl http://https.tn/ip/myip.php?type=onlyip)
+	osip=$(curl http://awk.sh/ip/myip.php?type=onlyip)
 	echo "------------------------------------------------------"
 	echo "恭喜，安装完成。请访问：http://${osip}:8000"
 	echo "帮助文档请访问：https://www.xiaoz.me/archives/8480"
@@ -51,7 +51,7 @@ function install_sea() {
 	echo "------------------------------------------------------"
 }
 
-echo "##########	欢迎使用Seafile一键安装脚本^_^2018年3月6日20:42:39	##########"
+echo "##########	欢迎使用Seafile一键安装脚本^_^	##########"
 
 echo "1.安装Seafile"
 echo "2.卸载Seafile"
@@ -86,4 +86,3 @@ if [ "$stype" == 1 ]
 	else
 		echo "参数错误！"
 	fi	
-#1111111
