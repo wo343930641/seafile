@@ -16,6 +16,9 @@ sudo pip install boto requests
 
 sudo /etc/init.d/mysqld start
 
+
+
+-----环境试试https://raw.githubusercontent.com/wo343930641/seafile/master/get-pip.py
 ----------  安装程序  -------------------
 
 wget https://raw.githubusercontent.com/fattoot/seafile/master/install_seafile.sh
